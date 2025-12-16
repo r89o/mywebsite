@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>الخلية البيئية الذكية</title>
+<style>
+/* --- تصميم الصفحة --- */
+body { font-family: Arial,sans-serif; margin:0; padding:0; background-color:#e8f5e9; scroll-behavior: smooth; }
+header { background: linear-gradient(90deg, #4CAF50, #2E7D32); color:white; text-align:center; padding:30px 0; box-shadow:0 4px 8px rgba(0,0,0,0.2); }
+header h1 { margin:0; font-size:2.5em; }
+main { padding:20px; max-width:1200px; margin:auto; }
+section { margin-bottom:60px; }
+h2 { color:#2E7D32; text-align:center; margin-bottom:20px; font-size:2em; }
+p { text-align:center; font-size:1.2em; line-height:1.6em; }
+
+/* --- الصور --- */
+.images { display:flex; flex-wrap:wrap; gap:20px; justify-content:center; margin-top:25px; }
+.images img { width:320px; height:220px; object-fit:cover; border-radius:15px; box-shadow:0 6px 14px rgba(0,0,0,0.3); transition: transform 0.3s, box-shadow 0.3s; }
+.images img:hover { transform:scale(1.05); box-shadow:0 12px 24px rgba(0,0,0,0.4); }
+
+/* --- أضواء الحالة --- */
+.lights { display:flex; justify-content:center; gap:30px; margin-top:30px; }
+.light { width:110px; height:110px; border-radius:50%; display:flex; justify-content:center; align-items:center; color:white; font-weight:bold; font-size:1.3em; cursor:pointer; box-shadow:0 6px 12px rgba(0,0,0,0.3); transition: transform 0.3s, box-shadow 0.3s; flex-direction:column; }
+.light:hover { transform:scale(1.15); box-shadow:0 12px 24px rgba(0,0,0,0.5); }
+.green { background-color:#4CAF50; }
+.yellow { background-color:#FFEB3B; color:black; }
+.red { background-color:#F44336; }
+#solution { text-align:center; margin-top:25px; font-size:1.2em; font-weight:bold; min-height:50px; transition: color 0.3s; }
+.solution-icon { display:block; font-size:2.2em; margin-bottom:10px; }
+
+/* --- خدمة العملاء --- */
+.contact { text-align:center; }
+.contact p { font-size:1.2em; margin:5px 0; }
+.contact a { color:#2E7D32; text-decoration:none; }
+.contact a:hover { text-decoration:underline; }
+
+/* --- الفوتر --- */
+footer { background: linear-gradient(90deg, #2E7D32, #4CAF50); color:white; text-align:center; padding:25px 0; margin-top:40px; }
+</style>
+</head>
+<body>
+
+<header>
+<h1>الخلية البيئية الذكية</h1>
+</header>
+
+<main>
+<!-- البيئة المدرسية الذكية -->
+<section>
+<h2>البيئة المدرسية الذكية</h2>
+<p>تحسين بيئة المدرسة من حيث النظافة، الإضاءة، التهوية والطاقة.</p>
+<div class="images">
+<img src="images/classroom.jpg" alt="صف دراسي ذكي">
+<img src="images/green_school.jpg" alt="مدرسة خضراء ونظيفة">
+<img src="images/smart_students.jpg" alt="طلاب في بيئة ذكية">
+</div>
+</section>
+
+<!-- الممرات المدرسية -->
+<section>
+<h2>الممرات المدرسية</h2>
+<p>الممرات المدرسية النظيفة والمنظمة تعكس بيئة تعليمية صحية وآمنة للطلاب.</p>
+<div class="images">
+<img src="images/hallway1.jpg" alt="ممر مدرسي منظم">
+<img src="images/hallway2.jpg" alt="ممر واسع ومضاء">
+<img src="images/hallway3.jpg" alt="ممر نظيف وآمن">
+</div>
+</section>
+
+<!-- أضواء الحالة -->
+<section>
+<h2>أضواء الحالة</h2>
+<p>اضغط على أي ضوء لمعرفة الحالة والحل التلقائي:</p>
+<div class="lights">
+<div class="light green" onclick="showSolution('✅ كل شيء على ما يرام! استمر في الحفاظ على البيئة الذكية.', '#4CAF50')">
+<span class="solution-icon">✅</span>أخضر</div>
+<div class="light yellow" onclick="showSolution('⚠️ بعض الملاحظات موجودة. يُنصح بالتنظيف أو ضبط الإضاءة.', '#FFEB3B')">
+<span class="solution-icon">⚠️</span>أصفر</div>
+<div class="light red" onclick="showSolution('❌ هناك مشكلة كبيرة! يجب التدخل فورًا.', '#F44336')">
+<span class="solution-icon">❌</span>أحمر</div>
+</div>
+<div id="solution"></div>
+</section>
+
+<!-- خدمة العملاء -->
+<section class="contact">
+<h2>خدمة العملاء</h2>
+<p>📞 الهاتف: 0535997762</p>
+<p>✉ البريد الإلكتروني: <a href="mailto:retajalqahtani74@gmail.com">retajalqahtani74@gmail.com</a></p>
+</section>
+</main>
+
+<footer>
+جميع الحقوق محفوظة © 2025
+</footer>
+
+<script>
+function showSolution(message, color) {
+const solutionDiv = document.getElementById('solution');
+solutionDiv.innerHTML = message;
+solutionDiv.style.color = color === '#FFEB3B' ? 'black' : color;
+}
+</script>
+
+</body>
+</html>
